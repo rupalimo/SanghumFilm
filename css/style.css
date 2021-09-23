@@ -1,0 +1,61 @@
+:root {
+  font-family: Optima, sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  cursor: auto;
+  animation-name: backgroundColour;
+  animation-duration: 8s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes backgroundColour {
+  from {background-color: #f3f3f3;}
+  to {background-color: #edebe8;}
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 1%;
+}
+
+ul {
+
+}
+
+li {
+  display: inline;
+}
+
+li:first-child {
+  padding-right:  5%;
+}
+
+section{
+  display: grid;
+  place-items: center;
+}
+
+p {
+  padding: 0;
+  line-height: 1.4em;
+  font-size: 1.5em;
+  margin: 15%;
+}

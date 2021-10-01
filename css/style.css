@@ -92,3 +92,15 @@ nav a {
 nav a:last-child {
   border-bottom: 1px solid var(--text-color);
 }
+
+@media (max-width: 599px) {
+  div {
+    position: absolute;
+    left: 1em;
+    mix-blend-mode: multiply;
+    z-index: 9;
+    cursor: move;
+    display: grid;
+    width: 80%;
+  }
+}

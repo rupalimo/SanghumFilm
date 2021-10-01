@@ -1,16 +1,16 @@
 :root {
   --primary-font: "Helvetica Neue", sans-serif;
   --secondary-font: "Newsreader", "Times", serif;
-  --accent-color: #E2E2E2;
+  --accent-color: ;
   --text-color: #000;
-  --text-color-secondary: #8B6C38;
+  --text-color-secondary: ;
+  --link-color: ;
+  --link-hover-color: #000EC6;
   /* --text-color-secondary: #; */
   color: var(--text-color);
   font-family: var(--primary-font);
-  cursor: default;
-  font-size: calc(0.75em + 1vw);
+  font-size: calc(1em + 0.25vw);
   letter-spacing: 0.0025em;
-  cursor: auto;
   animation-name: backgroundColour;
   animation-duration: 8s;
   animation-timing-function: ease;
@@ -43,21 +43,52 @@ body {
 
 div {
   position: absolute;
+  left: 1em;
   mix-blend-mode: multiply;
   z-index: 9;
   cursor: move;
+  display: grid;
+  width: 25%;
+  /* border: 1px solid var(--text-color); */
 }
 
+p {
+  border: 1px solid var(--text-color);
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 1em 0.625em;
+  line-height: 130%;
+}
+
+/* p a {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+} */
 nav {
   display: flex;
-  flex-direction: row;
-  border: 1px solid var(--text-color);
-  border-right: none;
-  border-bottom: none;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 a {
   text-decoration: none;
-  border-right: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+a:active, a:focus {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+nav a {
+  border: 1px solid var(--text-color);
+  border-bottom: none;
+  padding: 0 0.625em;
+}
+
+nav a:last-child {
   border-bottom: 1px solid var(--text-color);
 }

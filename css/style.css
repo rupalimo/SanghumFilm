@@ -1,7 +1,15 @@
 :root {
-  font-family: Optima, sans-serif;
-  font-size: 16px;
-  line-height: 1em;
+  --primary-font: "Helvetica Neue", sans-serif;
+  --secondary-font: "Newsreader", "Times", serif;
+  --accent-color: #E2E2E2;
+  --text-color: #000;
+  --text-color-secondary: #8B6C38;
+  /* --text-color-secondary: #; */
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  cursor: default;
+  font-size: calc(0.75em + 1vw);
+  letter-spacing: 0.0025em;
   cursor: auto;
   animation-name: backgroundColour;
   animation-duration: 8s;
@@ -14,8 +22,13 @@
 }
 
 @keyframes backgroundColour {
-  from {background-color: #f3f3f3;}
-  to {background-color: #edebe8;}
+  from {
+    background-color: #f3f3f3;
+  }
+
+  to {
+    background-color: #edebe8;
+  }
 }
 
 html, body {
@@ -24,38 +37,27 @@ html, body {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
 }
 
-ul, li {
-  list-style-type: none;
-  margin: 0;
-  padding: 1%;
+div {
+  position: absolute;
+  mix-blend-mode: multiply;
+  z-index: 9;
+  cursor: move;
 }
 
-ul {
-
+nav {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--text-color);
+  border-right: none;
+  border-bottom: none;
 }
 
-li {
-  display: inline;
-}
-
-li:first-child {
-  padding-right:  5%;
-}
-
-section{
-  display: grid;
-  place-items: center;
-}
-
-p {
-  padding: 0;
-  line-height: 1.4em;
-  font-size: 1.5em;
-  margin: 15%;
+a {
+  text-decoration: none;
+  border-right: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }

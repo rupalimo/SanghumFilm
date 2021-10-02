@@ -49,6 +49,7 @@ div {
   cursor: move;
   display: grid;
   width: 25%;
+  max-width: 460px;
   /* border: 1px solid var(--text-color); */
 }
 

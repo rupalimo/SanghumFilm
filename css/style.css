@@ -5,7 +5,7 @@
   --text-color: #000;
   --text-color-secondary: ;
   --link-color: ;
-  --link-hover-color: #000EC6;
+  --link-hover-color: #0018fb;
   /* --text-color-secondary: #; */
   color: var(--text-color);
   font-family: var(--primary-font);
@@ -92,4 +92,16 @@ nav a {
 
 nav a:last-child {
   border-bottom: 1px solid var(--text-color);
+}
+
+@media (max-width: 599px) {
+  div {
+    position: absolute;
+    left: 1em;
+    mix-blend-mode: multiply;
+    z-index: 9;
+    cursor: move;
+    display: grid;
+    width: 80%;
+  }
 }

@@ -101,12 +101,6 @@ main {}
 /* mobile breakpoint */
 @media (max-width: 599px) {
   div {
-    position: absolute;
-    left: 1em;
-    mix-blend-mode: multiply;
-    z-index: 9;
-    cursor: move;
-    display: grid;
-    width: 80%;
+    width: 90vw;
   }
 }

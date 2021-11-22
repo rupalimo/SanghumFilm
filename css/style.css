@@ -1,7 +1,7 @@
 :root {
   --primary-font: "Helvetica Neue", sans-serif;
   --secondary-font: "Newsreader", "Times", serif;
-  --accent-color: ;
+  --accent-color: #edebe8;
   --text-color: #000;
   --text-color-secondary: ;
   --link-color: ;
@@ -27,7 +27,7 @@
   }
 
   to {
-    background-color: #edebe8;
+    background-color: var(--accent-color);
   }
 }
 
@@ -46,12 +46,15 @@ div {
   left: 1em;
   top: 1em;
   mix-blend-mode: normal;
-  z-index: 9;
+  z-index: 2;
   cursor: move;
   display: grid;
   width: 25%;
+  min-width: 280px;
   max-width: 460px;
-  background: #edebe8;
+  background: var(--accent-color);
+  touch-action: none;
+  user-select: none;
   /* border: 1px solid var(--text-color); */
 }
 
@@ -102,5 +105,6 @@ main {}
 @media (max-width: 599px) {
   div {
     width: 90vw;
+    mix-blend-mode: normal;
   }
 }

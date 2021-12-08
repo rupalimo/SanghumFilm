@@ -41,10 +41,20 @@ body {
   width: 100%;
 }
 
-div {
+div.videoloop {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  width: 100vw;
+  overflow: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#griddrag {
   position: absolute;
-  left: 1em;
-  top: 1em;
+  left: 4em;
+  top: 8em;
   mix-blend-mode: normal;
   z-index: 2;
   cursor: move;
@@ -55,6 +65,8 @@ div {
   background: var(--accent-color);
   touch-action: none;
   user-select: none;
+  box-shadow: 1px 1px 12px var(--accent-color);
+  ;
   /* border: 1px solid var(--text-color); */
 }
 

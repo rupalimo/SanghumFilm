@@ -1,16 +1,12 @@
 :root {
-  --primary-font: "Helvetica Neue", sans-serif;
-  --secondary-font: "Newsreader", "Times", serif;
-  --accent-color: ;
+  --primary-font: "Arial", sans-serif;
   --text-color: #000;
   --text-color-secondary: #FFF;
-  --link-color: ;
   --link-hover-color: #0018fb;
-  /* --text-color-secondary: #; */
   color: var(--text-color);
-  font-family: var(--primary-font);
-  font-size: calc(1em + 0.25vw);
-  letter-spacing: 0.0025em;
+  font-size: calc(0.8em + 0.25vw);
+  letter-spacing: 0.025em;
+  line-height: 1.3em;
   /* animation-name: backgroundColour;
   animation-duration: 8s;
   animation-timing-function: ease;
@@ -122,5 +118,6 @@ main {}
     position: absolute;
     left: 1em;
     top: 1em;
+    width: 90vw;
   }
 }

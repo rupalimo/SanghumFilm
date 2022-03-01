@@ -108,7 +108,22 @@ nav a:last-child {
 
 main {}
 
-/* mobile breakpoint */
+/* breakpoints */
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* mobile */
 @media (max-width: 599px) {
   div {
     width: 90vw;
@@ -120,5 +135,14 @@ main {}
     left: 1em;
     top: 1em;
     width: 90vw;
+  }
+
+  video {
+    display: none;
+  }
+
+  body {
+    background: url('../assets/nagina.png');
+    background-size: cover;
   }
 }

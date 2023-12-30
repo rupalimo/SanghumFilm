@@ -69,6 +69,7 @@ div.videoloop {
 	/* border: 1px solid var(--text-color); */
 }
 
+
 #griddrag p a {
 	color: var(--link-hover-color);
 }
@@ -87,10 +88,6 @@ p {
 	line-height: 130%;
 }
 
-/* p a {
-  text-decoration: underline;
-  color: var(--link-hover-color);
-} */
 nav {
 	display: flex;
 	flex-direction: column;

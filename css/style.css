@@ -49,8 +49,9 @@ div.videoloop {
 
 #griddrag {
   position: absolute;
-  left: 4em;
-  top: 4em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   mix-blend-mode: normal;
   z-index: 2;
   cursor: move;

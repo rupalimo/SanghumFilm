@@ -1,9 +1,9 @@
 :root {
 	--primary-font: 'Arial Narrow', sans-serif;
 	--secondary-font: 'Arial', sans-serif;
-	--text-color: #40d200;
-	--text-color-secondary: #dfdfd252;
-	--link-hover-color: #e1cee0;
+--text-color: #ffffff80;
+    --secondary-color: #1aff00;
+    --link-hover-color: #c0b1dc;
 	color: var(--text-color);
 	font-size: calc(0.8em + 0.25vw);
 	letter-spacing: 0.025em;
@@ -76,10 +76,11 @@ div.videoloop {
 #griddrag p a:hover {
 	text-decoration: underline;
 	text-underline-offset: 3px;
+	color: var(--secondary-color);
 }
 
 p {
-	border: 2px solid var(--text-color);
+	border: 1px dotted var(--text-color);
 	border-bottom: none;
 	margin: 0;
 	padding: 1em 0.625em;
@@ -107,17 +108,17 @@ a:focus {
 }
 
 a:hover {
-	color: var(--link-hover-color);
+	color: var(--secondary-color);
 }
 
 nav a {
-	border: 2px solid var(--text-color);
+	border: 1px dotted var(--text-color);
 	border-bottom: none;
 	padding: 0.2em 0.625em;
 }
 
 nav a:last-child {
-	border-bottom: 2px solid var(--text-color);
+	border-bottom: 1px dotted var(--text-color);
 }
 
 main {

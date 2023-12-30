@@ -1,14 +1,15 @@
 :root {
-  --primary-font: "Arial", sans-serif;
-  --text-color: #000;
-  --text-color-secondary: #FFF;
-  --link-hover-color: #0018fb;
-  color: var(--text-color);
-  font-size: calc(0.8em + 0.25vw);
-  letter-spacing: 0.025em;
-  line-height: 1.3em;
-  font-family: var(--primary-font);
-  /* animation-name: backgroundColour;
+	--primary-font: 'Arial Narrow', sans-serif;
+	--secondary-font: 'Arial', sans-serif;
+	--text-color: #40d200;
+	--text-color-secondary: #dfdfd252;
+	--link-hover-color: #e1cee0;
+	color: var(--text-color);
+	font-size: calc(0.8em + 0.25vw);
+	letter-spacing: 0.025em;
+	line-height: 1.3em;
+	font-family: var(--primary-font);
+	/* animation-name: backgroundColour;
   animation-duration: 8s;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -27,51 +28,62 @@
     background-color: var(--accent-color);
   }
 } */
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 div.videoloop {
-  position: fixed;
-  top: 0em;
-  left: 0em;
-  width: 100vw;
-  overflow: 100vh;
-  z-index: -1;
-  pointer-events: none;
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	width: 100vw;
+	overflow: 100vh;
+	z-index: -1;
+	pointer-events: none;
 }
 
 #griddrag {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: normal;
-  z-index: 2;
-  cursor: move;
-  display: grid;
-  width: 25%;
-  min-width: 280px;
-  max-width: 460px;
-  background: var(--text-color-secondary);
-  touch-action: none;
-  user-select: none;
-  box-shadow: 1px 1px 12px var(--text-color-secondary);
-  /* border: 1px solid var(--text-color); */
+	mix-blend-mode: color;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: normal;
+	z-index: 2;
+	cursor: move;
+	display: grid;
+	width: 25%;
+	min-width: 280px;
+	/* max-width: 460px;
+	background: var(--text-color-secondary); */
+	touch-action: none;
+	user-select: none;
+	/* box-shadow: 1px 1px 12px var(--text-color-secondary); */
+	/* border: 1px solid var(--text-color); */
+}
+
+#griddrag p a {
+	color: var(--link-hover-color);
+}
+
+#griddrag p a:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 p {
-  border: 2px solid var(--text-color);
-  border-bottom: none;
-  margin: 0;
-  padding: 1em 0.625em;
-  line-height: 130%;
+	border: 2px solid var(--text-color);
+	border-bottom: none;
+	margin: 0;
+	padding: 1em 0.625em;
+	line-height: 130%;
 }
 
 /* p a {
@@ -79,71 +91,73 @@ p {
   color: var(--link-hover-color);
 } */
 nav {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
 }
 
 a {
-  text-decoration: none;
-  color: var(--text-color);
+	text-decoration: none;
+	color: var(--text-color);
 }
 
-a:active, a:focus {
-  text-decoration: none;
+a:active,
+a:focus {
+	text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+	color: var(--link-hover-color);
 }
 
 nav a {
-  border: 2px solid var(--text-color);
-  border-bottom: none;
-  padding: 0.2em 0.625em;
+	border: 2px solid var(--text-color);
+	border-bottom: none;
+	padding: 0.2em 0.625em;
 }
 
 nav a:last-child {
-  border-bottom: 2px solid var(--text-color);
+	border-bottom: 2px solid var(--text-color);
 }
 
-main {}
+main {
+}
 
 /* breakpoints */
 @media (min-aspect-ratio: 16/9) {
-  video {
-    width: 100%;
-    height: auto;
-  }
+	video {
+		width: 100%;
+		height: auto;
+	}
 }
 
 @media (max-aspect-ratio: 16/9) {
-  video {
-    width: auto;
-    height: 100%;
-  }
+	video {
+		width: auto;
+		height: 100%;
+	}
 }
 
 /* mobile */
 @media (max-width: 599px) {
-  div {
-    width: 90vw;
-    mix-blend-mode: normal;
-  }
+	div {
+		width: 90vw;
+		mix-blend-mode: normal;
+	}
 
-  #griddrag {
-    position: absolute;
-    left: 1em;
-    top: 1em;
-    width: 90vw;
-  }
+	#griddrag {
+		position: absolute;
+		left: 1em;
+		top: 1em;
+		width: 90vw;
+	}
 
-  video {
-    display: none;
-  }
+	video {
+		display: none;
+	}
 
-  body {
-    background: url('../assets/nagina.png');
-    background-size: cover;
-  }
+	body {
+		background: url('../assets/nagina.png');
+		background-size: cover;
+	}
 }

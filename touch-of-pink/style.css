@@ -1,0 +1,13 @@
+:root {
+	--primary-font: 'Acumin WideSemi', sans-serif;
+	--title-font: 'Acumin WideReg', sans-serif;
+--subtitle-font: 'Acumin Wide Semi', sans-serif;
+	--text-color: #000000;
+	--secondary-color: #1aff00;
+	color: var(--text-color);
+	font-size: calc(1em + 0.25vw);
+	letter-spacing: ;
+	line-height: 1.15em;
+	font-family: var(--primary-font);
+}
+

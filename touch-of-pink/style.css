@@ -120,6 +120,7 @@ a {
 	display: grid;
 	grid-template-columns: max-content 1fr;
 	margin: 2.5rem 0 0 0;
+	word-wrap: break-word;
 }
 
 .content--title h1 {
@@ -213,4 +214,52 @@ a.link--button:hover {
 .content--img img {
 	width: 520px;
 	height: auto;
+}
+
+#mobile-only {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+
+.content--title h1, .content--title p + h1  {
+	font-size: 2rem;
+}
+.content--title p {
+	font-size: 0.8rem;
+    transform: translatex(-1rem);
+}
+.content--title p + h1 {
+	margin: 1rem 0;
+}
+}
+@media (max-width: 1028px)
+ {
+	main {
+	grid-template-columns: 1fr 340px;
+}
+
+.content--img img {
+	width: 320px;
+	height: auto;
+}
+
+}
+
+@media (max-width: 740px)
+ {
+	#mobile-only {
+		display: block;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+.content--text {
+	grid-column: 1/3;
+}
+
+.content--img {
+display: none;
+}
+
 }

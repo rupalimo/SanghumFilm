@@ -46,7 +46,7 @@
 }
 
 ::selection {
-	background: #000000;
+	background: #fcc5ff;
 	color: #fff;
 }
 
@@ -75,7 +75,7 @@ body {
 header {
 	width: 100%;
 	text-transform: uppercase;
-	border-bottom: 1px dotted ;
+	border-bottom: 1px dotted;
 	font-family: var(--header-font);
 	background-color: #ffffff;
 	position: relative;
@@ -176,8 +176,8 @@ nav ul {
 	margin: 0 0 1.25rem 0;
 }
 
-nav a+ul {
-		margin: 1.25rem 0 2rem 0;
+nav a + ul {
+	margin: 1.25rem 0 2rem 0;
 }
 
 .content--description {
@@ -185,17 +185,24 @@ nav a+ul {
 }
 
 .content--footer ul {
-list-style: none;
-margin: 1rem 0;
+	list-style: none;
+	margin: 1rem 0 2rem 0;
+	padding: 0;
+	font-size: 0.85rem;
 }
 
 a.link--button {
-	padding: 1rem;
-	text-transform: uppercase;
-	width: 100%;
+	font-size: 0.75rem;
+	text-decoration: none;
+	padding: 6px 4px;
 	margin: 2rem 0 4rem 0;
 	text-align: center;
 	border: 1px solid var(--text-color);
+}
+
+a.link--button:hover {
+	color: #FFFFFF;
+	background-color: var(--text-color);
 }
 .content--img {
 	position: fixed;

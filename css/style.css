@@ -184,7 +184,7 @@ nav a:last-child {
 }
 
 nav a:nth-of-type(1):hover  {
-color: #FFF;
+color:var(--secondary-color);
 }
 nav a:nth-of-type(1):focus  {
 	font-style: oblique;

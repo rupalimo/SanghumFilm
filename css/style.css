@@ -39,7 +39,7 @@ body {
 	width: 100%;
 }
 
-div.videoloop {
+.videoloop {
 	position: fixed;
 	top: 0em;
 	left: 0em;
@@ -141,33 +141,52 @@ main {
 	}
 }
 
-@media (max-aspect-ratio: 16/9) {
-	video {
-		width: auto;
-		height: 100%;
-	}
-}
-
 /* mobile */
-@media (max-width: 599px) {
-	div {
-		width: 90vw;
-		mix-blend-mode: normal;
-	}
+@media (max-width: 740px) {
 
-	#griddrag {
-		position: absolute;
-		left: 1em;
-		top: 1em;
-		width: 90vw;
-	}
-
-	video {
+	.videoloop {
 		display: none;
 	}
 
 	body {
-		background: url('../assets/nagina.png');
-		background-size: cover;
+		background-image: url(../assets/kareenax.jpg);
+		 background-position: center;
+ background-size: 338px 530px;
+overflow-y: hidden;
 	}
+
+	#griddrag {
+
+	position: initial;
+	transform: translate(0, -50%);
+	mix-blend-mode: normal;
+	z-index: 2;
+	display: grid;
+	width: 86%;
+	touch-action: none;
+	user-select: none;
+	margin: 50vh auto;
+	background-color: #ffffff;
+	color: black;
+}
+
+p, nav a {
+	border: 0.7px solid black;
+		border-bottom: none;
+}
+
+nav a, nav a:nth-of-type(1) {
+	color: black;
+}
+
+nav a:last-child {
+	border-bottom: 0.7px solid black;
+}
+
+nav a:nth-of-type(1):hover  {
+color: #FFF;
+}
+nav a:nth-of-type(1):focus  {
+	font-style: oblique;
+}
 }

@@ -205,10 +205,25 @@ a.link--button:hover {
 	color: #FFFFFF;
 	background-color: var(--text-color);
 }
-.content--img {
+
+/* .content--img {
 	position: fixed;
 	top: 4.5rem;
 	right: 1rem;
+} */
+
+.content--img {
+    position: inherit;
+    overflow-y: scroll;
+    margin: 0 10px;
+}
+
+
+.content--img img:nth-of-type(1) {
+margin-top: 1.5rem;
+}
+.content--img img:last-child {
+margin-bottom: 4rem;
 }
 
 .content--img img {
@@ -220,7 +235,7 @@ a.link--button:hover {
 	display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1324px) {
 
 .content--title h1, .content--title p + h1  {
 	font-size: 2rem;

@@ -94,7 +94,7 @@ nav {
 	align-items: stretch;
 }
 
-nav a:nth-of-type(1) {
+/* nav a:nth-of-type(1) {
 background-color: var(--secondary-color);
 	color: var(--text-color);
 }
@@ -103,7 +103,7 @@ nav a:nth-of-type(1):hover {
 background-color: #1aff003c;
 	color: var(--secondary-color);
 
-}
+} */
 
 
 a {

@@ -6,17 +6,67 @@
 	<head>
 		<title>SanghumFilm Collective</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/programming.css" />
 		<link rel="icon" type="image/png" href="favicon.png" />
 	</head>
 
 	<body>
-		<div class="videoloop">
+		<header>
+			<h1>Sanghum Film</h1>
+			<div class="filter__container">
+				<!-- <legend>sanghumfilm programming</legend> -->
+				<p>Programming</p>
+				<div class="filter--item">
+					<input type="checkbox" id="upcoming" name="upcoming" />
+					<label for="upcoming">All</label>
+				</div>
+				<div class="filter--item">
+					<input type="checkbox" id="upcoming" name="upcoming" />
+					<label for="upcoming">Upcoming</label>
+				</div>
+
+				<div class="filter--item">
+					<input type="checkbox" id="archive" name="archive" />
+					<label for="archive">Series</label>
+				</div>
+				<div class="filter--item">
+					<input type="checkbox" id="IRL" name="IRL" />
+					<label for="IRL">IRL</label>
+				</div>
+				<div class="filter--item">
+					<input type="checkbox" id="online" name="online" />
+					<label for="online">Online</label>
+				</div>
+				<div class="filter--item">
+					<input
+						type="checkbox"
+						id="co-presentations"
+						name="co-presentations"
+					/>
+					<label for="co-presentations">Co-presentations</label>
+				</div>
+			</div>
+		</header>
+		<main class="program__container">
+			<div class="program--item">
+				<img src="film-posters/touch-of-pink.jpg" />
+				<div>
+					<h5>Touch of Pink</h5>
+					<p>2004</p>
+					<ul>
+						<li>IRL</li>
+						<li>Collaboration</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+
+		<!-- <div class="videoloop">
 			<video autoplay loop muted playsline width="1920px">
 				<source src="assets/nagina scrollY.mp4" type="video/mp4" />
 			</video>
-		</div>
-		<div id="griddrag">
+		</div> -->
+		<!-- <div id="griddrag">
 			<p>
 				SanghumFilm Collective is an obsession with all things filmi-- exploring
 				mainstream, independent, and experimental films from the Indian
@@ -63,11 +113,8 @@
 					target="_blank"
 					>instagram</a
 				>
-				<!-- <a href="https://www.facebook.com/SanghumFilm/" title="@SanghumFilm" target="_blank">facebook↗</a>
-      <a href="https://twitter.com/sanghums/" title="@SanghumS" target="_blank">twitter↗</a> -->
+		
 			</nav>
-		</div>
+		</div> -->
 	</body>
-
-	<script src="js/infinitescroll.js"></script>
 </html>

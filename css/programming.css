@@ -1,0 +1,133 @@
+@keyframes backgroundColour {
+	from {
+		background-color: white;
+	}
+
+	to {
+		background-color: cornsilk;
+	}
+}
+:root {
+	--primary-font: 'Arial Narrow', sans-serif;
+	--secondary-font: 'Arial', sans-serif;
+	--text-color: #000000;
+	--secondary-color: #1aff00;
+	--link-hover-color: #c0b1dc;
+	color: var(--text-color);
+	font-size: calc(0.8em + 0.25vw);
+	letter-spacing: 0.025em;
+	line-height: 1.3em;
+	font-family: var(--primary-font);
+	/* animation-name: backgroundColour;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running; */
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+a:active,
+a:focus {
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--secondary-color);
+}
+
+header {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+header h1{
+	border: 1px dotted var(--text-color);
+	margin: 0;
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-weight: normal;
+
+}
+
+.filter__container p  {
+	margin: 0;
+}
+
+.filter__container p::after  {
+	content: "\2192";
+	margin-left: 0.5rem;
+}
+
+.filter__container {
+	display: flex;
+	flex-direction: row;
+	border: 1px dotted var(--text-color);
+	border-left: none;
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+.filter--item {
+	margin: 0 0.5rem;
+}
+
+.program__container {
+	display: flex;
+	flex-direction: row;
+	padding: 0 2rem;
+	font-family: var(--secondary-font);
+}
+
+.program--item {
+	width: 20%;
+	min-width: 200px;
+}
+
+.program--item img {
+	width: 100%;
+}
+
+.program--item ul {
+	list-style: none;
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
+.program--item li {
+	color: var(--link-hover-color);
+}
+
+.program--item li::before {
+	content: '#';
+}
+
+.program--item li::after {
+	content: ',';
+	margin-right: 0.5rem;
+}
+
+/* breakpoints */
+
+/* mobile */
+@media (max-width: 800px) {
+}

@@ -56,21 +56,20 @@ header {
 	flex-direction: row;
 }
 
-header h1{
+header h1 {
 	border: 1px dotted var(--text-color);
 	margin: 0;
 	padding: 0.5rem;
 	font-size: 1rem;
 	font-weight: normal;
-
 }
 
-.filter__container p  {
+.filter__container p {
 	margin: 0;
 }
 
-.filter__container p::after  {
-	content: "\2192";
+.filter__container p::after {
+	content: '\2192';
 	margin-left: 0.5rem;
 }
 
@@ -90,7 +89,7 @@ header h1{
 .program__container {
 	display: flex;
 	flex-direction: row;
-	padding: 0 2rem;
+	padding: 1rem;
 	font-family: var(--secondary-font);
 }
 
@@ -99,8 +98,8 @@ header h1{
 	min-width: 200px;
 }
 
-.program--item img {
-	width: 100%;
+.program--item[data-confirm='hide'] {
+	display: none;
 }
 
 .program--item ul {
@@ -117,13 +116,51 @@ header h1{
 	color: var(--link-hover-color);
 }
 
-.program--item li::before {
-	content: '#';
+.program--item li[data-filter-type='FALSE'] {
+	display: none;
 }
 
-.program--item li::after {
-	content: ',';
+.program--item .filter--upcoming::before {
+	content: '#upcoming';
+	text-transform: uppercase;
 	margin-right: 0.5rem;
+}
+
+.program--item .filter--series::before {
+	content: '#series';
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+.program--item .filter--online::before {
+	content: '#online';
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+
+.program--item .filter--past::before {
+	content: '#past';
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+.program--item .filter--oneoff::before {
+	content: '#one-off';
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+.program--item .filter--irl::before {
+	content: '#IRL';
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+
+
+.program--item img {
+	width: 100%;
 }
 
 /* breakpoints */

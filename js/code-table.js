@@ -14,69 +14,34 @@ $(document).ready(function () {
 
 				let section = $(
 					`<div class="program--item" data-confirm="` +
-						entry['ready'] +
+						entry.Ready +
 						`"><img src="film-posters/` +
-						entry['img file name'] +
+						entry.ImgFileName +
 						`" /><p>` +
-						entry.title +
+						entry.Title +
 						`</p><p>` +
-						entry.director +
+						entry.Director +
 						`</p><p>` +
-						entry.year +
+						entry.Year +
 						`</p><ul>
 					<li data-filter-type="` +
-						entry.TAGupcoming +
+						entry.TagUpcoming +
 						`" class="filter--upcoming"></li>
 					<li data-filter-type="` +
-						entry.TAGseries +
+						entry.TagSeries +
 						`" class="filter--series"></li><li data-filter-type="` +
-						entry.TAGonline +
+						entry.TagOnline +
 						`" class="filter--online"></li><li data-filter-type="` +
-						entry.TAGpast +
+						entry.TagPast +
 						`" class="filter--past"></li><li data-filter-type="` +
-						entry.TAGoneoff +
+						entry.TagOneoff +
 						`" class="filter--oneoff"></li><li data-filter-type="` +
-						entry.TAGirl +
+						entry.TagIRL +
 						`" class="filter--irl"></li>
 				</ul></div>`
 				).appendTo('#listings');
 
-				let details = $(
-					`<details>
-					<summary>
-						<span>
-						<p>` +
-						entry.ptitle +
-						`</p>
-						<p>` +
-						entry.partist +
-						`</p>
-						<p>` +
-						entry.pdate +
-						`</p>
-					</span><p>` +
-						entry.prole +
-						`</p>
-						</summary>
-						<div><img src="` +
-						entry.pimg +
-						`" title="Project Image"><a href="` +
-						entry.plink +
-						`">View project</a><ul>` +
-						entry.pdescription +
-						`</ul></div>
-						</details>`
-				).appendTo('#project');
-
-				// let details = $(
-				// 	`<details><summary>` +
-				// 		entry.project +
-				// 		`</summary><ol><li>` +
-				// 		entry.project +
-				// 		`</li></ol></details>`
-				// ).appendTo('#project');
-
-				// let article = $(`<p>` + entry.bio + `</p>`).appendTo('#bio');
+				
 			});
 		}
 	);

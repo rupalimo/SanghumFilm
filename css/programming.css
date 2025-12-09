@@ -1,3 +1,5 @@
+@import 'font.css';
+
 @keyframes backgroundColour {
 	from {
 		background-color: white;
@@ -10,8 +12,13 @@
 :root {
 	--primary-font: 'Arial Narrow', sans-serif;
 	--secondary-font: 'Arial', sans-serif;
+	--film-title: 'Arial Black', 'Arial Narrow', sans-serif;
+	--film-director: 'Arial Narrow', sans-serif;
+
+	--light-color: #f1fff0;
 	--text-color: #000000;
 	--secondary-color: #1aff00;
+	--grey: #909090cc;
 	--link-hover-color: #c0b1dc;
 	color: var(--text-color);
 	font-size: calc(0.8em + 0.25vw);
@@ -34,6 +41,7 @@ body {
 body {
 	height: 100%;
 	width: 100%;
+	/* background: #f1fff0; */
 }
 
 a {
@@ -51,17 +59,32 @@ a:hover {
 }
 
 header {
-	padding: 0;
+	padding: 1rem 0;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+	/* height: 100vh; */
+	align-items: flex-start;
+	position: fixed;
+	width: 100vw;
 }
 
 header h1 {
-	border: 1px dotted var(--text-color);
-	margin: 0;
+	/* border: 1px dotted var(--text-color); */
+	border: 1px dotted var(--light-color);
+	margin: 0 -1px 0 0;
 	padding: 0.5rem;
 	font-size: 1rem;
 	font-weight: normal;
+	width: max-content;
+	/* background: rgba(255, 255, 255, 0.85); */
+	background: var(--secondary-color);
+}
+
+.filter__container {
+	width: max-content;
+	background: rgba(255, 255, 255, 0.85);
 }
 
 .filter__container p {
@@ -76,10 +99,12 @@ header h1 {
 .filter__container {
 	display: flex;
 	flex-direction: row;
-	border: 1px dotted var(--text-color);
-	border-left: none;
+	box-shadow: 0 0 12px 4px var(--light-color) inset;
+	border: 1px dotted var(--secondary-color);
+	/* border-left: none; */
 	font-size: 1rem;
 	padding: 0.5rem;
+	/* background: var(--light-color); */
 }
 
 .filter--item {
@@ -89,17 +114,46 @@ header h1 {
 .program__container {
 	display: flex;
 	flex-direction: row;
-	padding: 1rem;
+	padding: 4.5rem 1rem;
 	font-family: var(--secondary-font);
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .program--item {
-	width: 20%;
-	min-width: 200px;
+	width: calc(16% - 1rem);
+	min-width: calc(180px + 1rem);
 }
 
 .program--item[data-confirm='hide'] {
 	display: none;
+}
+
+.program--item .program--details {
+	text-align: center;
+}
+
+.program--item .program--details h5 {
+	font-weight: normal;
+}
+
+.program--item .program--details h5:first-of-type {
+	font-family: var(--film-title);
+	line-height: 1.8ch;
+}
+
+.program--item .program--details h5 + h5 {
+		font-family: var(--film-director);
+}
+
+
+.program--item .program--details h5, .program--item .program--details p {
+	margin: 0;
+}
+
+.program--item .program--details p {
+	font-size: 0.75rem;
+	color: var(--grey);
 }
 
 .program--item ul {
@@ -121,43 +175,40 @@ header h1 {
 }
 
 .program--item .filter--upcoming::before {
-	content: '#upcoming';
+	content: 'upcoming';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
 
 .program--item .filter--series::before {
-	content: '#series';
+	content: 'series';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
 
 .program--item .filter--online::before {
-	content: '#online';
+	content: 'online';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
 
-
 .program--item .filter--past::before {
-	content: '#past';
+	content: 'past';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
 
 .program--item .filter--oneoff::before {
-	content: '#one-off';
+	content: 'one-off';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
 
 .program--item .filter--irl::before {
-	content: '#IRL';
+	content: 'IRL';
 	text-transform: uppercase;
 	margin-right: 0.5rem;
 }
-
-
 
 .program--item img {
 	width: 100%;

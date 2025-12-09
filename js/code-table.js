@@ -17,13 +17,13 @@ $(document).ready(function () {
 						entry.Ready +
 						`"><img src="film-posters/` +
 						entry.ImgFileName +
-						`" /><p>` +
+						`" /><div class="program--details"><h5>` +
 						entry.Title +
-						`</p><p>` +
+						`</h5><h5>` +
 						entry.Director +
-						`</p><p>` +
+						`</h5><p>` +
 						entry.Year +
-						`</p><ul>
+						`</p></div><ul>
 					<li data-filter-type="` +
 						entry.TagUpcoming +
 						`" class="filter--upcoming"></li>

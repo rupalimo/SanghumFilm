@@ -15,15 +15,7 @@ $(document).ready(function () {
 				let section = $(
 					`<div class="program--item" data-confirm="` +
 						entry.Ready +
-						`"><img src="film-posters/` +
-						entry.ImgFileName +
-						`" /><div class="program--details"><h4>` +
-						entry.Title +
-						`</h4><span><h5>` +
-						entry.Director +
-						`</h5><p>` +
-						entry.Year +
-						`</p></span></div><ul>
+						`"><ul>
 					<li data-filter-type="` +
 						entry.TagUpcoming +
 						`" class="filter--upcoming"></li>
@@ -31,17 +23,17 @@ $(document).ready(function () {
 						entry.TagSeries +
 						`" class="filter--series"></li><li data-filter-type="` +
 						entry.TagOnline +
-						`" class="filter--online"></li><li data-filter-type="` +
-						entry.TagPast +
-						`" class="filter--past"></li><li data-filter-type="` +
-						entry.TagOneoff +
-						`" class="filter--oneoff"></li><li data-filter-type="` +
-						entry.TagIRL +
-						`" class="filter--irl"></li>
-				</ul></div>`
+						`" class="filter--online"></li>
+				</ul><img src="film-posters/` +
+						entry.ImgFileName +
+						`" /><div class="program--details"><h4>` +
+						entry.Title +
+						`</h4><span><h5>` +
+						entry.Director +
+						`</h5><p>` +
+						entry.Year +
+						`</p></span></div></div>`
 				).appendTo('#listings');
-
-				
 			});
 		}
 	);

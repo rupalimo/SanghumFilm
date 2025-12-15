@@ -98,10 +98,17 @@ header nav ul {
 	cursor: default;
 	font-size: 0.85rem;
 	text-transform: uppercase;
+	text-shadow: 0px 0px 2px var(--text-color);
+	mix-blend-mode: darken;
 }
 
-header nav ul li:hover {
+header nav ul li a:hover {
 	cursor: grab;
+	color: var(--text-color);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: var(--text-color);
+	text-underline-offset: 2px;
 }
 
 header nav ul li:first-of-type {
@@ -142,7 +149,6 @@ header nav ul li + li {
 }
 
 .program--item {
-
 	min-width: 180px;
 	width: calc((100% / 6) - 0.25rem);
 	padding: 0;
@@ -150,7 +156,6 @@ header nav ul li + li {
 	position: relative;
 	/* width: calc(20% - 8px); */
 	border: 1px dotted var(--light-color);
-
 }
 
 .program--item[data-confirm='hide'] {
@@ -158,7 +163,7 @@ header nav ul li + li {
 }
 
 .program--item .program--details {
-	margin: 0 0.25rem 1rem 0.25rem ;
+	margin: 0 0.25rem 1rem 0.25rem;
 	text-align: center;
 	color: var(--light-color);
 	text-shadow: 1px 0px 2px var(--light-color);
@@ -250,10 +255,10 @@ header nav ul li + li {
 }
 
 .program--item img {
-width: 100%;
-  filter: grayscale(100%) contrast(2);
-  mix-blend-mode: exclusion;
-  transition: filter 0.0125s linear, transform 0.125s linear;
+	width: 100%;
+	filter: grayscale(100%) contrast(2);
+	mix-blend-mode: exclusion;
+	/* transition: filter 0.0125s linear, transform 0.125s linear; */
 }
 
 .program--item:hover {
@@ -262,12 +267,10 @@ width: 100%;
 	/* background-image: linear-gradient(transparent 95%, var(--secondary-color) 100%); */
 }
 
-
 .program--item:hover img {
 	filter: grayscale(0%) contrast(1) brightness(1);
 	mix-blend-mode: normal;
 	box-shadow: 1px;
-
 }
 
 .program--item:hover ul {

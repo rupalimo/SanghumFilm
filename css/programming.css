@@ -124,13 +124,13 @@ header nav ul li + li {
 	flex-direction: row;
 	position: fixed;
 	border-radius: 1rem;
-	box-shadow: 0 0 12px 4px white inset;
+	box-shadow: 0 0 12px 2px white inset;
 	text-transform: uppercase;
 	z-index: 2;
 	left: 50%;
 	transform: translateX(-50%);
 	width: max-content;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.25);
 }
 
 .filter--item {

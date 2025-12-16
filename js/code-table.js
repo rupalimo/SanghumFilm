@@ -15,13 +15,14 @@ $(document).ready(function () {
 				let section = $(
 					`<div class="program--item" data-confirm="` +
 						entry.Ready +
+						`" data-upcoming="` +
+						entry.TagUpcoming +
 						`"><ul>
 					<li data-filter-type="` +
-						entry.TagUpcoming +
-						`" class="filter--upcoming"></li>
-					<li data-filter-type="` +
 						entry.TagSeries +
-						`" class="filter--series"></li><li data-filter-type="` +
+						`" class="filter--series">` +
+						entry.SeriesTitle +
+						`</li><li data-filter-type="` +
 						entry.TagOnline +
 						`" class="filter--online"></li>
 				</ul><img src="film-posters/` +
@@ -32,7 +33,13 @@ $(document).ready(function () {
 						entry.Director +
 						`</h5><p>` +
 						entry.Year +
-						`</p></span></div></div>`
+						`</p></span></div><span data-filter-type="` +
+						entry.TagUpcoming +
+						`" class="filter--upcoming"><p>` +
+						entry.EventDate +
+						`</p><p>` +
+						entry.EventLocation +
+						`</p></span></div>`
 				).appendTo('#listings');
 			});
 		}

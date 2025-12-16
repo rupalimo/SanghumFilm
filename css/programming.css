@@ -1,20 +1,9 @@
 @import 'font.css';
 
-@keyframes backgroundColour {
-	from {
-		background-color: white;
-	}
-
-	to {
-		background-color: cornsilk;
-	}
-}
 :root {
 	--primary-font: 'Arial Narrow', sans-serif;
 	--secondary-font: 'Arial', sans-serif;
 	--film-title: 'Arial Black', 'Arial Narrow', sans-serif;
-	--film-director: 'Arial Narrow', sans-serif;
-
 	--light-color: #f1fff0;
 	--text-color: #000000;
 	--secondary-color: #1aff00;
@@ -25,11 +14,7 @@
 	letter-spacing: 0.025em;
 	line-height: 1.3em;
 	font-family: var(--primary-font);
-	/* animation-name: backgroundColour;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	animation-fill-mode: none;
-	animation-play-state: running; */
+
 }
 
 html,
@@ -41,7 +26,7 @@ body {
 body {
 	height: 100%;
 	width: 100%;
-	/* background: #f1fff0; */
+
 }
 
 a {
@@ -62,18 +47,13 @@ a:hover {
 	position: fixed;
 	top: 0;
 	left: 0;
+	filter: invert(1) saturate(0.1);
+	z-index: -1;
 }
 
 header {
 	padding: 0.25rem;
-	/* display: flex;
-	flex-direction: row;
-	justify-content: center; */
 	margin: 0;
-	/* height: 100vh; */
-	/* align-items: flex-start;
-		position: fixed;
-		width: 100vw; */
 }
 
 header h1 {
@@ -88,21 +68,26 @@ header h1 {
 	background: var(--secondary-color);
 }
 
-header nav ul {
+header nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	list-style: none;
 	margin: 0;
 	padding: 0;
-	cursor: default;
-	font-size: 0.85rem;
-	text-transform: uppercase;
-	text-shadow: 0px 0px 2px var(--text-color);
-	mix-blend-mode: darken;
+
 }
 
-header nav ul li a:hover {
+header nav a, header nav span button {
+	cursor: default;
+	font-size: 0.85rem;
+	font-family: var(--primary-font);
+	text-transform: uppercase;
+	text-shadow: 0px 0px 2px var(--text-color);
+	background: transparent;
+	outline: none;
+}
+
+header nav a:hover, header nav span button:hover {
 	cursor: grab;
 	color: var(--text-color);
 	text-decoration: underline;
@@ -111,11 +96,16 @@ header nav ul li a:hover {
 	text-underline-offset: 2px;
 }
 
-header nav ul li:first-of-type {
+header nav span button {
+	border: none;
+	outline: none;
+}
+
+header nav a:first-of-type {
 	flex-grow: 1;
 }
 
-header nav ul li + li {
+header nav span a {
 	margin-left: 2rem;
 }
 
@@ -192,7 +182,7 @@ header nav ul li + li {
 
 .program--item .program--details h5,
 .program--item .program--details p {
-	font-family: var(--film-director);
+	font-family: var(--secondary-font);
 }
 
 .program--item .program--details p::before {

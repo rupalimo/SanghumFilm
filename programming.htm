@@ -17,37 +17,34 @@
 			</video>
 		</div>
 		<header>
-			<div class="filter__container">
+			<form class="filter__container">
 				<div class="filter--item">
-					<input type="checkbox" id="upcoming" name="upcoming" />
-					<label for="upcoming">All</label>
+					<input type="radio" id="all" name="all" checked />
+					<label for="all">All</label>
 				</div>
 				<div class="filter--item">
-					<input type="checkbox" id="upcoming" name="upcoming" />
-					<label for="upcoming">Upcoming</label>
+					<input type="radio" id="screening" name="screening" />
+					<label for="screening">Screening</label>
 				</div>
 
 				<div class="filter--item">
-					<input type="checkbox" id="archive" name="archive" />
-					<label for="archive">Series</label>
+					<input type="radio" id="co-presentation" name="co-presentation" />
+					<label for=co-presentation">Co-presentation</label>
 				</div>
-				<div class="filter--item">
-					<input type="checkbox" id="IRL" name="IRL" />
-					<label for="IRL">IRL</label>
-				</div>
-				<div class="filter--item">
-					<input type="checkbox" id="online" name="online" />
+				
+				<!-- <div class="filter--item">
+					<input type="radio" id="online" name="online" />
 					<label for="online">Online</label>
-				</div>
+				</div> -->
 				<div class="filter--item">
 					<input
-						type="checkbox"
-						id="co-presentations"
-						name="co-presentations"
+						type="radio"
+						id="gathering"
+						name="gathering"
 					/>
-					<label for="co-presentations">Canadian</label>
+					<label for="gathering">Gathering</label>
 				</div>
-			</div>
+			</form>
 			<nav>
 				<a href="index.htm" title="Return to homepage"
 					>sanghum film collective</a

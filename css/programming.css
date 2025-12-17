@@ -103,7 +103,7 @@ header nav span a {
 	flex-direction: row;
 	position: fixed;
 	border-radius: 1rem;
-	box-shadow: 0 0 12px 2px white inset;
+	/* box-shadow: 0 0 12px 2px white inset; */
 	text-transform: uppercase;
 	z-index: 2;
 	left: 50%;
@@ -115,6 +115,35 @@ header nav span a {
 .filter--item {
 	margin: 0 0.5rem;
 	font-size: 0.85rem;
+}
+
+.filter--item input {
+	appearance: none;
+	margin: 0;
+
+	border-radius: 1rem;
+	width: 10px;
+	height: 11px;
+
+	border: 1px solid var(--light-color);
+	transition: 0.2s all linear;
+
+	position: relative;
+	top: 0;
+}
+
+.filter--item input:checked {
+	background-image: none;
+	background: var(--text-color);
+	border: 1px solid var(--light-color);
+	border-radius: 0;
+}
+
+.filter--item label {
+	text-transform: capitalize;
+}
+
+.filter--item input:checked label {
 }
 
 .program__container {
@@ -259,10 +288,10 @@ header nav span a {
 	margin: 0 0.25rem 0.075rem;
 	border-radius: 1rem;
 }
-
+/* 
 .program--item .filter--online::before {
 	content: '#online';
-}
+} */
 
 .program--item img {
 	width: 100%;
@@ -281,16 +310,25 @@ header nav span a {
 	box-shadow: none;
 }
 
-
-
-.program--item[data-upcoming='TRUE']:hover .filter--upcoming {
+.program--item[data-upcoming='TRUE']:hover .filter--upcoming,
+.program--item[data-upcoming='FALSE']:hover
+	.filter--online[data-online='online'] {
 	opacity: 1;
+}
+
+
+.program--item .filter--online[data-online='irl'] {
+display: none;
+}
+
+.program--item .filter--online[data-online='online'] {
+	opacity: 0;
 }
 
 .program--item:hover img {
 	filter: grayscale(0%) contrast(1) brightness(1);
 	mix-blend-mode: normal;
-	box-shadow: 1px;
+	box-shadow: none;
 }
 
 .program--item:hover ul {

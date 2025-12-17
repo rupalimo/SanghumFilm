@@ -17,14 +17,14 @@ $(document).ready(function () {
 						entry.Ready +
 						`" data-upcoming="` +
 						entry.TagUpcoming +
+						`" data-category="` +
+						entry.EventType +
 						`"><ul>
 					<li data-filter-type="` +
 						entry.TagSeries +
 						`" class="filter--series">` +
 						entry.SeriesTitle +
-						`</li><li data-filter-type="` +
-						entry.TagOnline +
-						`" class="filter--online"></li>
+						`</li>
 				</ul><img src="film-posters/` +
 						entry.ImgFileName +
 						`" /><div class="program--details"><h4>` +
@@ -39,7 +39,11 @@ $(document).ready(function () {
 						entry.EventDate +
 						`</p><p>` +
 						entry.EventLocation +
-						`</p></span></div>`
+						`</p></span><p data-online="` +
+						entry.OnlineIrl +
+						`" class="filter--online">` +
+						entry.OnlineIrl +
+						`</p></div>`
 				).appendTo('#listings');
 			});
 		}

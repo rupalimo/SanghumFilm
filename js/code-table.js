@@ -48,4 +48,21 @@ $(document).ready(function () {
 			});
 		}
 	);
+
+	$('input[name="program-filter"]').click(function () {
+		const filterItem = $(this).prop('id');
+
+		if (filterItem == 'All') {
+			$('.program--item').show();
+		} else if (filterItem == 'Screening') {
+			$('.program--item[data-category="Gathering"]').addClass('hidden');
+			$('.program--item[data-category="Co-presentation"]').addClass('hidden');
+		} else if (filterItem == 'Co-presentation') {
+			$('.program--item[data-category="Gathering"]').addClass('hidden');
+			$('.program--item[data-category="Screening"]').addClass('hidden');
+		} else if (filterItem == 'Gathering') {
+			$('.program--item[data-category="Screening"]').addClass('hidden');
+			$('.program--item[data-category="Co-presentation"]').addClass('hidden');
+		}
+	});
 });

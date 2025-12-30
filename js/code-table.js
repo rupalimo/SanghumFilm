@@ -17,7 +17,7 @@ $(document).ready(function () {
 						entry.Ready +
 						`" data-upcoming="` +
 						entry.TagUpcoming +
-						`" data-category="` +
+						`" data-category="all ` +
 						entry.EventType +
 						`"><ul>
 					<li data-filter-type="` +
@@ -49,20 +49,49 @@ $(document).ready(function () {
 		}
 	);
 
-	$('input[name="program-filter"]').click(function () {
-		const filterItem = $(this).prop('id');
 
-		if (filterItem == 'All') {
-			$('.program--item').show();
-		} else if (filterItem == 'Screening') {
-			$('.program--item[data-category="Gathering"]').addClass('hidden');
-			$('.program--item[data-category="Co-presentation"]').addClass('hidden');
-		} else if (filterItem == 'Co-presentation') {
-			$('.program--item[data-category="Gathering"]').addClass('hidden');
-			$('.program--item[data-category="Screening"]').addClass('hidden');
-		} else if (filterItem == 'Gathering') {
-			$('.program--item[data-category="Screening"]').addClass('hidden');
-			$('.program--item[data-category="Co-presentation"]').addClass('hidden');
-		}
-	});
+	var $filterRadio = $('input[type="radio"]');
+	var filterFunc = function () {
+		var selectedFilters = {};
+
+		$filterRadio.filter(':checked').each(function () {
+			if (!selectedFilters.hasOwnProperty(this.name)) {
+				selectedFilters[this.name] = [];
+			}
+
+			selectedFilters[this.name].push(this.value);
+		});
+
+		// create a collection containing all of the filterable elements
+		var $filteredResults = $('.program--item');
+
+		// loop over the selected filter name -> (array) values pairs
+		$.each(selectedFilters, function (name, filterValues) {
+			// filter each .program--item element
+			$filteredResults = $filteredResults.filter(function () {
+				var matched = false,
+					currentFilterValues = $(this).data('category').split(' ');
+
+				// loop over each category value in the current .program--item's data-category
+				$.each(currentFilterValues, function (_, currentFilterValue) {
+					// if the current category exists in the selected filters array
+					// set matched to true, and stop looping. as we're ORing in each
+					// set of filters, we only need to match once
+
+					if ($.inArray(currentFilterValue, filterValues) != -1) {
+						matched = true;
+						return false;
+					}
+				});
+
+				// if matched is true the current .program--item element is returned
+				return matched;
+			});
+		});
+
+		$('.program--item').hide().filter($filteredResults).show();
+	};
+
+	$filterRadio.on('change', filterFunc);
+
 });

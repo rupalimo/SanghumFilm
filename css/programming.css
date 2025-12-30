@@ -171,8 +171,8 @@ header nav span a {
 
 }
 
-.program--item[data-confirm='hide'] {
-	display: none;
+.program--item[data-confirm='hide'], .program--item[data-confirm='undefined'] {
+	display: none; !important;
 }
 
 .program--item[data-upcoming='upcoming'] {

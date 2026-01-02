@@ -16,6 +16,17 @@
 	font-family: var(--primary-font);
 }
 
+* {
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+}
+
 html,
 body {
 	margin: 0;
@@ -147,32 +158,27 @@ header nav span a {
 	text-transform: capitalize;
 }
 
-.filter--item input:checked label {
-}
-
 .program__container {
 	display: flex;
 	flex-direction: row;
-
-	padding: 0 0.25rem;
 	font-family: var(--secondary-font);
 	flex-wrap: wrap;
-	justify-content: space-between;
+	
 }
 
 .program--item {
 	min-width: 180px;
-	width: calc((100% / 6) - 0.25rem);
+		width: calc((100% / 6) - 0.25rem);
 	padding: 0;
-	margin: 0 0 0.125rem 0;
+	margin: 0 0.125rem 0.25rem 0.125rem;
 	position: relative;
-	/* width: calc(20% - 8px); */
-	border: 1px dotted var(--light-color);	
 
+	border: 1px dotted var(--light-color);
 }
 
-.program--item[data-confirm='hide'], .program--item[data-confirm='undefined'] {
-	display: none; !important;
+.program--item[data-confirm='hide'],
+.program--item[data-confirm='undefined'] {
+	display: none !important;
 }
 
 .program--item[data-upcoming='upcoming'] {
@@ -354,19 +360,16 @@ header nav span a {
 	opacity: 1;
 }
 
-/* breakpoints */
-
 /* mobile */
-@media (max-width: 1100px) {
+
+@media (max-width: 1108px) {
 	.program--item {
-		min-width: calc((100% / 5) - 0.25rem);
-		width: calc(100% / 5 - 0.25rem);
+		width: calc((100% / 4) - 0.25rem);
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 735px) {
 	.program--item {
-		min-width: calc((100% / 3) - 0.25rem);
 		width: calc((100% / 3) - 0.25rem);
 	}
 }
@@ -376,9 +379,8 @@ header nav span a {
 		margin-bottom: 3.75rem;
 	}
 	.program--item {
-		min-width: calc((100% / 2) - 0.25rem);
-		width: calc((100% / 2) - 0.25rem);
-		background: #0000002b;
+		background: #0000006b;
+			width: calc((100% / 2) - 0.25rem);
 	}
 
 	.filter__container {
@@ -428,6 +430,10 @@ header nav span a {
 	.program--item .filter--upcoming {
 		opacity: 1;
 	}
+
+	  .program--item[data-upcoming="upcoming"] {
+			padding-bottom: 2rem;
+		}
 
 	.program--item .program--details,
 	.program--item .filter--upcoming {

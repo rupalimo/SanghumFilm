@@ -78,7 +78,7 @@ header nav {
 }
 
 header nav a,
-header nav span button {
+header nav span a {
 	cursor: default;
 	font-size: 0.85rem;
 	font-family: var(--primary-font);
@@ -88,29 +88,26 @@ header nav span button {
 	outline: none;
 }
 
-header nav a:hover,
-header nav span button:hover {
+header nav a:hover {
 	cursor: grab;
 	color: var(--text-color);
-	/* color: var(--secondary-color); */
 	text-decoration: underline;
 	text-underline-offset: 3px;
 	text-decoration-color: var(--text-color);
-	/* text-decoration-color: var(--secondary-color);
-	text-shadow: 0px 0px 2px var(--secondary-color); */
-}
-
-header nav span button {
-	border: none;
-	outline: none;
 }
 
 header nav a:first-of-type {
 	flex-grow: 1;
 }
 
-header nav span a {
-	margin-left: 2rem;
+.inactive {
+	margin-left: 1rem;
+	color: var(--grey);
+}
+
+.inactive:hover {
+	cursor: not-allowed;
+	color: var(--grey);
 }
 
 .filter__container {
@@ -223,6 +220,10 @@ header nav span a {
 
 .program--item .program--details h4 {
 	font-family: var(--film-title);
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
 }
 
 .program--item .program--details span {
@@ -236,7 +237,9 @@ header nav span a {
 	font-family: var(--secondary-font);
 }
 
-.program--item .program--details p::before:not(.program--item .program--details p[data-year='']) {
+.program--item
+	.program--details
+	p:not(.program--item .program--details p[data-year=''])::before {
 	content: '\00B7';
 	margin: 0 2px;
 }
@@ -324,13 +327,14 @@ header nav span a {
 
 .program--item:hover {
 	cursor: grab;
-	border: 1px dotted transparent;
-	/* background-image: linear-gradient(transparent 95%, var(--secondary-color) 100%); */
+	border: 1px solid white;
+	background: var(--text-color);
+	border-radius: 8px;
 }
 
 .program--item[data-upcoming='upcoming']:hover {
-	border: 1px solid transparent;
-	box-shadow: none;
+	border: 1px solid var(--secondary-color);
+	/* box-shadow: none; */
 }
 
 .program--item[data-upcoming='upcoming']:hover .filter--upcoming,
@@ -345,6 +349,7 @@ header nav span a {
 	filter: grayscale(0%) contrast(1) brightness(1);
 	mix-blend-mode: normal;
 	box-shadow: none;
+	border-radius: 7px 7px 0 0;
 }
 
 .program--item:hover ul {

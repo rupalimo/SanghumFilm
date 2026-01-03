@@ -163,12 +163,11 @@ header nav span a {
 	flex-direction: row;
 	font-family: var(--secondary-font);
 	flex-wrap: wrap;
-	
 }
 
 .program--item {
 	min-width: 180px;
-		width: calc((100% / 6) - 0.25rem);
+	width: calc((100% / 6) - 0.25rem);
 	padding: 0;
 	margin: 0 0.125rem 0.25rem 0.125rem;
 	position: relative;
@@ -237,7 +236,7 @@ header nav span a {
 	font-family: var(--secondary-font);
 }
 
-.program--item .program--details p::before {
+.program--item .program--details p::before:not(.program--item .program--details p[data-year='']) {
 	content: '\00B7';
 	margin: 0 2px;
 }
@@ -380,7 +379,7 @@ header nav span a {
 	}
 	.program--item {
 		background: #0000006b;
-			width: calc((100% / 2) - 0.25rem);
+		width: calc((100% / 2) - 0.25rem);
 	}
 
 	.filter__container {
@@ -431,9 +430,9 @@ header nav span a {
 		opacity: 1;
 	}
 
-	  .program--item[data-upcoming="upcoming"] {
-			padding-bottom: 2rem;
-		}
+	.program--item[data-upcoming='upcoming'] {
+		padding-bottom: 2rem;
+	}
 
 	.program--item .program--details,
 	.program--item .filter--upcoming {

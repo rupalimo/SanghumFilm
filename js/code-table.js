@@ -31,7 +31,9 @@ $(document).ready(function () {
 						entry.Title +
 						`</h4><span><h5>` +
 						entry.Director +
-						`</h5><p>` +
+						`</h5><p data-year="` +
+						entry.Year +
+						`">` +
 						entry.Year +
 						`</p></span></div><span data-filter-type="` +
 						entry.TagUpcoming +

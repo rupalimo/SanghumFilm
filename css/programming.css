@@ -108,6 +108,7 @@ header nav a:first-of-type {
 .inactive:hover {
 	cursor: not-allowed;
 	color: var(--grey);
+	text-decoration-color: var(--grey);
 }
 
 .filter__container {

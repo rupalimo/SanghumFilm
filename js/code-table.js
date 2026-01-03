@@ -13,7 +13,9 @@ $(document).ready(function () {
 				if (index == 0) return;
 
 				let section = $(
-					`<div class="program--item" data-confirm="` +
+					`<a href="program/` +
+						entry.ImgFileName +
+						`.htm" class="program--item" data-confirm="` +
 						entry.Ready +
 						`" data-upcoming="` +
 						entry.TagUpcoming +
@@ -25,9 +27,9 @@ $(document).ready(function () {
 						`" class="filter--series">` +
 						entry.SeriesTitle +
 						`</li>
-				</ul><img src="film-posters/` +
+				</ul><img src="../film-posters/` +
 						entry.ImgFileName +
-						`" /><div class="program--details"><h4>` +
+						`.jpg" /><div class="program--details"><h4>` +
 						entry.Title +
 						`</h4><span><h5>` +
 						entry.Director +
@@ -45,12 +47,11 @@ $(document).ready(function () {
 						entry.OnlineIrl +
 						`" class="filter--online">` +
 						entry.OnlineIrl +
-						`</p></div>`
+						`</p></a>`
 				).appendTo('#listings');
 			});
 		}
 	);
-
 
 	var $filterRadio = $('input[type="radio"]');
 	var filterFunc = function () {
@@ -95,5 +96,4 @@ $(document).ready(function () {
 	};
 
 	$filterRadio.on('change', filterFunc);
-
 });

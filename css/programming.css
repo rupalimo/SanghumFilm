@@ -96,7 +96,7 @@ header nav a:hover {
 	text-decoration-color: var(--text-color);
 }
 
-header nav a:first-of-type {
+header nav .home {
 	flex-grow: 1;
 }
 

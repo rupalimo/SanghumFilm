@@ -40,7 +40,7 @@ $(document).ready(function () {
 							entry.Copresenter +
 							`</a><p>` +
 							entry.Collaborators +
-							`</p><p>`
+							`</p>`
 					).appendTo('#banner-details');
 
 					let img = $(
@@ -54,27 +54,69 @@ $(document).ready(function () {
 					).appendTo('#banner-img');
 				}
 
-				
-				
-				
-
-				let article = $(
-					`<p>` +
-						entry.EventDetails +
-						`</p><span><a src="` +
-						entry.CopresenterLink +
-						`">` +
-						entry.Copresenter +
-						`</a><p>` +
-						entry.Collaborators +
-						`</p></span><p>` +
+				let p = $(
+					`<p data-confirm="` +
 						entry.EventDescription +
-						`</p><p>` +
-						entry.SeriesTitle +
-						`</p><p>` +
-						entry.SeriesDescription +
+						`">` +
+						entry.EventDescription +
 						`</p>`
-				).appendTo('#details');
+				).appendTo('#film-description');
+
+				let div = $(
+					`<span><p data-confirm="` +
+						entry.Duration +
+						`">` +
+						entry.Duration +
+						`</p><p data-confirm="` +
+						entry.Country +
+						`">` +
+						entry.Country +
+						`</p><p data-confirm="` +
+						entry.Language +
+						`">` +
+						entry.Language +
+						`</p></span><a href="` +
+						entry.TrailerLink +
+						`" data-confirm="` +
+						entry.TrailerLink +
+						`">Trailer</a><p data-confirm="` +
+						entry.DirectorBio +
+						`">` +
+						entry.DirectorBio +
+						`</p>`
+				).appendTo('#film-meta');
+
+				let span = $(
+					`<img data-confirm="` +
+						entry.FilmStills +
+						`" class="secondary__img" src="../film-stills/` +
+						entry.FilmStills +
+						`2.jpg" title="Film still: ` +
+						entry.Title +
+						`, ` +
+						entry.Year +
+						`" /><img data-confirm="` +
+						entry.FilmStills +
+						`" class="secondary__img" src="../film-stills/` +
+						entry.FilmStills +
+						`3.jpg" title="Film still: ` +
+						entry.Title +
+						`, ` +
+						entry.Year +
+						`" /><img data-confirm="` +
+						entry.FilmStills +
+						`" class="secondary__img" src="../film-stills/` +
+						entry.FilmStills +
+						`4.jpg" title="Film still: ` +
+						entry.Title +
+						`, ` +
+						entry.Year +
+						`" /><p data-confirm="` +
+						entry.DirectorBio +
+						`">` +
+						entry.DirectorBio +
+						`</p>`
+				).appendTo('#dir-bio');
 			});
 		}
 	);

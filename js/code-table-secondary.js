@@ -53,6 +53,25 @@ $(document).ready(function () {
 							`" />`
 					).appendTo('#banner-img');
 				}
+				let div = $(
+					`<p data-confirm="` +
+						entry.Duration +
+						`">` +
+						entry.Duration +
+						`</p><p data-confirm="` +
+						entry.Country +
+						`">` +
+						entry.Country +
+						`</p><p data-confirm="` +
+						entry.Language +
+						`">` +
+						entry.Language +
+						`</p><a href="` +
+						entry.TrailerLink +
+						`" data-confirm="` +
+						entry.TrailerLink +
+						`" target="_blank">Trailer</a>`
+				).appendTo('#film-meta');
 
 				let p = $(
 					`<p data-confirm="` +
@@ -62,31 +81,15 @@ $(document).ready(function () {
 						`</p>`
 				).appendTo('#film-description');
 
-				let div = $(
-					`<span><p data-confirm="` +
-						entry.Duration +
-						`">` +
-						entry.Duration +
-						`</p><p data-confirm="` +
-						entry.Country +
-						`">` +
-						entry.Country +
-						`</p><p data-confirm="` +
-						entry.Language +
-						`">` +
-						entry.Language +
-						`</p></span><a href="` +
-						entry.TrailerLink +
-						`" data-confirm="` +
-						entry.TrailerLink +
-						`">Trailer</a><p data-confirm="` +
+				let span = $(
+					`<p data-confirm="` +
 						entry.DirectorBio +
 						`">` +
 						entry.DirectorBio +
 						`</p>`
-				).appendTo('#film-meta');
+				).appendTo('#dir-bio');
 
-				let span = $(
+				let article = $(
 					`<img data-confirm="` +
 						entry.FilmStills +
 						`" class="secondary__img" src="../film-stills/` +
@@ -111,12 +114,24 @@ $(document).ready(function () {
 						entry.Title +
 						`, ` +
 						entry.Year +
-						`" /><p data-confirm="` +
-						entry.DirectorBio +
+						`" />`
+				).appendTo('#film-stills');
+
+				let footer = $(
+					`<div  data-confirm="` +
+						entry.SeriesTitle +
+						`"><p data-confirm="` +
+						entry.SeriesDescription +
 						`">` +
-						entry.DirectorBio +
-						`</p>`
-				).appendTo('#dir-bio');
+						entry.SeriesDescription +
+						`</p><span><p data-confirm="` +
+						entry.SeriesTitle +
+						`">This film is part of the screening series</p><p data-confirm="` +
+						entry.SeriesTitle +
+						`">` +
+						entry.SeriesTitle +
+						`</p></span></div>`
+				).appendTo('#series');
 			});
 		}
 	);

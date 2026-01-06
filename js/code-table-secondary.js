@@ -124,13 +124,11 @@ $(document).ready(function () {
 						entry.SeriesDescription +
 						`">` +
 						entry.SeriesDescription +
-						`</p><span><p data-confirm="` +
-						entry.SeriesTitle +
-						`">This film is part of the screening series</p><p data-confirm="` +
-						entry.SeriesTitle +
+						`</p><p data-confirm="` +
+						entry.SeriesProgram +
 						`">` +
-						entry.SeriesTitle +
-						`</p></span></div>`
+						entry.SeriesProgram +
+						`</p></div>`
 				).appendTo('#series');
 			});
 		}

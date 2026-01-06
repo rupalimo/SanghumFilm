@@ -8,10 +8,6 @@ a:focus {
 	text-decoration: none;
 }
 
-a:hover {
-	color: var(--secondary-color);
-}
-
 .hidden,
 [data-confirm=''],
 [data-confirm='undefined'],
@@ -158,8 +154,14 @@ header .back-programming:hover::after {
 	cursor: pointer;
 }
 
+.banner-details a:hover, .film-meta a:hover {
+	color: var(--text-color);
+	text-shadow: 0px 0px 1px var(--text-color);
+}
+
 .banner-details a:hover::before {
 	color: var(--text-color);
+	text-shadow: none;
 }
 
 .banner-details p::before,
@@ -208,8 +210,7 @@ header .back-programming:hover::after {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	background-color: var(--secondary-color);
-	box-shadow: 0 0 4px 8px white inset;
+
 }
 
 .film-meta p,

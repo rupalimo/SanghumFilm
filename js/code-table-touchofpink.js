@@ -1,5 +1,5 @@
 var SPREADSHEET_ID_AND_TAB =
-	'1qg2NQO9Qh_zjApjyMTMLcUorq8Ox2Al8x6_a1q42gSg/freshkill';
+	'1qg2NQO9Qh_zjApjyMTMLcUorq8Ox2Al8x6_a1q42gSg/touchofpink';
 
 $(document).ready(function () {
 	$.getJSON(
@@ -30,7 +30,9 @@ $(document).ready(function () {
 							entry.EventDate +
 							`</p><p>` +
 							entry.EventLocation +
-							`</p><a src="` +
+							`</p><a data-confirm="` +
+							entry.TicketLink +
+							`" src="` +
 							entry.TicketLink +
 							`">` +
 							entry.TicketPrice +

@@ -241,10 +241,6 @@ header .back-programming:hover::after {
 	text-align: justify;
 }
 
-.film-description p:nth-of-type(2) {
-	color: var(--grey);
-}
-
 .film-trailer {
 	text-align: center;
 	border: 1px solid var(--secondary-color);

@@ -27,7 +27,7 @@ $(document).ready(function () {
 						`" class="filter--series">` +
 						entry.SeriesTitle +
 						`</li>
-				</ul><img src="../film-posters/` +
+				</ul><img src="film-posters/` +
 						entry.ImgFileName +
 						`.jpg" /><div class="program--details"><h4>` +
 						entry.Title +

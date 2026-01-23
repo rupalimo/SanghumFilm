@@ -385,6 +385,14 @@ header nav .home {
 }
 
 @media (max-width: 640px) {
+	.videoloop {
+		display: none;
+	}
+
+	body {
+		background: var(--text-color);
+	}
+
 	main {
 		margin-bottom: 3.75rem;
 	}
@@ -409,6 +417,10 @@ header nav .home {
 		font-size: 1rem;
 		margin: 0.25rem 0;
 		padding: 0.5rem;
+	}
+
+	header nav a {
+		color: white;
 	}
 
 	.filter--item input {

@@ -13,9 +13,7 @@ $(document).ready(function () {
 				if (index == 0) return;
 
 				let section = $(
-					`<a href="program/` +
-						entry.ImgFileName +
-						`.htm" class="program--item" data-confirm="` +
+					`<a href="#" class="program--item" data-confirm="` +
 						entry.Ready +
 						`" data-upcoming="` +
 						entry.TagUpcoming +
